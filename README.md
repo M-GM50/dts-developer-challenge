@@ -1,45 +1,38 @@
-# DTS Developer Technical Test
+# Marion's DTS Developer Technical Test
 
-## Objective
-To assess your ability to build a simple API and frontend using best coding practices.
+See task in [task.md](/task.md)
 
-## Scenario
-HMCTS requires a new system to be developed so caseworkers can keep track of their tasks. Your technical test is to develop that new system so caseworkers can efficiently manage their tasks.
+## Prerequisites
 
-## Task Requirements
+- Node.js (version specified in `.nvmrc`)
+- Yarn package manager
 
-### Backend API
-The backend should be able to:
-- Create a task with the following properties:
-  - Title
-  - Description (optional field)
-  - Status
-  - Due date/time
-- Retrieve a task by ID
-- Retrieve all tasks
-- Update the status of a task
-- Delete a task
+## Getting Started
 
-### Frontend Application
-The frontend should be able to:
-- Create, view, update, and delete tasks
-- Display tasks in a user-friendly interface
+To run this application locally, follow these steps:
 
-## Technical Requirements
-Here are a few starter repositories if you would like to use our tech stack:
-- [Backend Starter Repo](https://github.com/hmcts/hmcts-dev-test-backend)
-- [Frontend Starter Repo](https://github.com/hmcts/hmcts-dev-test-frontend)
+1) Install dependencies:
+   ```bash
+   yarn install
+   ```
 
-You can use any language you are comfortable with or our own stack:
-- **Backend**: Any language or framework of your choice
-- **Frontend**: Any language or framework of your choice
-- Implement **unit tests**
-- Store data in a **database**
-- Include **validation and error handling**
-- **Document API endpoints**
+2) Build the assets:
+   ```bash
+   yarn webpack
+   ```
 
-## Submission Guidelines
-- Create repositories on GitHub and add add the links to your application
-- Include a helpful `README.md`!
+3) Start the development server:
+   ```bash
+   yarn start:dev
+   ```
+   
+   Alternatively, you can navigate to package.json and run the start:dev script manually through your IDE.
 
-Happy coding!
+## Accessing the Application
+
+Once the server is running, you can access the application at: https://localhost:3100
+
+Note: Since the development server uses a self-signed certificate for HTTPS, you'll see a security warning in your browser on first visit. This is normal.
+
+
+
