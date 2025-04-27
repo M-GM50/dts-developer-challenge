@@ -5,117 +5,180 @@
 <!-- You may want to make further use of these components: https://design-system.service.gov.uk/components/
 but ultimately it is up to you -->
 
+
 {% block content %}
-  <h1 class="govuk-heading-xl">Welcome to your dev test!</h1>
+<div class="govuk-width-container">
+    <h1 class="govuk-heading-xl">Marion's case management system</h1>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form id="task-form" class="govuk-form-group">
+        <h2 class="govuk-heading-m">Add New Task</h2>
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="title">Title</label>
+          <input class="govuk-input govuk-input--width-20" id="title" name="title" type="text" required>
+        </div>
 
-  <!-- The freedom is yours. You can design the solution however you like, however there is a starting point provided
-  to ensure you have both services running. You may want to make use of the Gov UK Components:
-  https://design-system.service.gov.uk/components/ to add tabs and so forth :) -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="description">Description</label>
+          <textarea class="govuk-textarea" id="description" name="description" rows="3"></textarea>
+        </div>
 
-  {% if example.id %}
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="status">Status</label>
+          <select class="govuk-select govuk-input--width-10" id="status" name="status" required>
+            <option value="TODO">To Do</option>
+            <option value="IN_PROGRESS">In Progress</option>
+            <option value="DONE">Done</option>
+          </select>
+        </div>
 
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "ID"
-          },
-          value: {
-            text: example.id
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "change case id ?!"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Case Number"
-          },
-          value: {
-            text: example.caseNumber
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "change case number"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Title"
-          },
-          value: {
-            html: example.title
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "change case title"
-              }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Description"
-          },
-          value: {
-            html: example.description
-          },
-          actions: {
-            items: [
-               {
-                 href: "#",
-                 text: "Delete",
-                 visuallyHiddenText: "Delete description"
-               },
-               {
-                 href: "#",
-                 text: "Change",
-                 visuallyHiddenText: "Change description"
-               }
-            ]
-          }
-        },
-        {
-          key: {
-            text: "Status"
-          },
-          value: {
-            html: example.status
-          },
-          actions: {
-            items: [
-            ]
-          }
-        },
-        {
-          key: {
-           text: "Created Date"
-          },
-          value: {
-           html: example.createdDate
-          },
-          actions: {
-           items: [
-           ]
-          }
-        }
-      ]
-    }) }}
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="due_date">Due Date</label>
+          <input class="govuk-input govuk-input--width-10" id="due_date" name="due_date" type="date" required>
+        </div>
 
-  {% endif %}
+        <button type="submit" class="govuk-button" style="margin-top: 2rem">Add Task</button>
+      </form>
 
-{% endblock %}
+      <h2 class="govuk-heading-m">Tasks</h2>
+      <div id="tasks-list" class="tasks-grid"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Task list template
+  function createTaskElement(task) {
+    return `
+      <div class="govuk-panel task-panel" data-task-id="${task.id}">
+        <h3 class="govuk-heading-s">${task.title} ${task.status === 'DONE' ? '✅' : ''}</h3>
+        <p class="govuk-body">${task.description || ''}</p>
+        <hr class="govuk-section-break govuk-section-break--visible">
+        <p class="govuk-body">
+          <strong>Status:</strong> ${task.status}<br>
+          </p>
+          <p class="govuk-body">
+           <hr class="govuk-section-break govuk-section-break--visible">
+          <strong>Due:</strong> ${new Date(task.due_date).toLocaleDateString()}
+        </p>
+        <hr class="govuk-section-break govuk-section-break--visible">
+        <div class="govuk-button-group">
+          <div class="govuk-body">Change status:</div>
+          <select class="govuk-select status-select" style="width: auto">
+            <option value="TODO" ${task.status === 'TODO' ? 'selected' : ''}>To Do</option>
+            <option value="IN_PROGRESS" ${task.status === 'IN_PROGRESS' ? 'selected' : ''}>In Progress</option>
+            <option value="DONE" ${task.status === 'DONE' ? 'selected' : ''}>Done</option>
+          </select>
+          <button class="govuk-button govuk-button--warning delete-task" data-task-id="${task.id}">Delete</button>
+        </div>
+      </div>
+    `;
+  }
+
+  // Load tasks
+  async function loadTasks() {
+    const response = await fetch('/api/tasks');
+    const tasks = await response.json();
+    document.getElementById('tasks-list').innerHTML = tasks.map(createTaskElement).join('');
+  }
+
+  // Add task
+  document.getElementById('task-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const task = Object.fromEntries(formData);
+    
+    await fetch('/api/tasks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(task)
+    });
+    
+    e.target.reset();
+    loadTasks();
+  });
+
+  // Update task status
+  document.getElementById('tasks-list').addEventListener('change', async (e) => {
+    if (e.target.classList.contains('status-select')) {
+      const taskId = e.target.closest('.task-panel').dataset.taskId;
+      await fetch(`/api/tasks/${taskId}/status`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: e.target.value })
+      });
+      loadTasks();
+    }
+  });
+
+  // Delete task
+  document.getElementById('tasks-list').addEventListener('click', async (e) => {
+    if (e.target.classList.contains('delete-task')) {
+      const taskId = e.target.dataset.taskId;
+      await fetch(`/api/tasks/${taskId}`, { method: 'DELETE' });
+      loadTasks();
+    }
+  });
+
+  // Initial load
+  loadTasks();
+</script>
+
+<style>
+  .tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .task-panel {
+    margin-bottom: 0;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border: 1px solid #b1b4b6;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-panel h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .task-panel p {
+    margin-bottom: 1rem;
+  }
+  
+  .task-panel .govuk-body {
+    margin-bottom: 0.5rem;
+  }
+
+  .task-panel .govuk-select {
+    margin-bottom: 1rem;
+  }
+  
+  .task-panel p:last-child {
+    margin-bottom: 0;
+  }
+
+  .task-panel .govuk-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: auto;
+  }
+
+  .task-panel .govuk-button-group > * {
+    margin-bottom: 1rem;
+  }
+
+  .task-panel .govuk-button-group > *:last-child {
+    margin-bottom: 0;
+  }
+</style>
+{% endblock %} 

@@ -2654,10 +2654,117 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@libsql/client@npm:^0.15.4":
+  version: 0.15.4
+  resolution: "@libsql/client@npm:0.15.4"
+  dependencies:
+    "@libsql/core": ^0.15.4
+    "@libsql/hrana-client": ^0.7.0
+    js-base64: ^3.7.5
+    libsql: ^0.5.6
+    promise-limit: ^2.7.0
+  checksum: 09ca3218f719ad620f669b73e6e17b150c4eece4b673e588e97955df2cd9990544c9cff89d2b558fb237a06f9d8e21466950deeef9cb9d5b580476b90d75a967
+  languageName: node
+  linkType: hard
+
+"@libsql/core@npm:^0.15.4":
+  version: 0.15.4
+  resolution: "@libsql/core@npm:0.15.4"
+  dependencies:
+    js-base64: ^3.7.5
+  checksum: 28772e9c9ace58f0cdc67ec8ac5f29508db9e19c6996a408ec0c0254164650b117ec4a2c1abdbe98e8300f1177e81e87db2ab2e3a695a0c966ef9a0de3eac014
+  languageName: node
+  linkType: hard
+
+"@libsql/darwin-arm64@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/darwin-arm64@npm:0.5.8"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@libsql/darwin-x64@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/darwin-x64@npm:0.5.8"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@libsql/hrana-client@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@libsql/hrana-client@npm:0.7.0"
+  dependencies:
+    "@libsql/isomorphic-fetch": ^0.3.1
+    "@libsql/isomorphic-ws": ^0.1.5
+    js-base64: ^3.7.5
+    node-fetch: ^3.3.2
+  checksum: 0d36931ca3a01144dc14294d1d9666ee64724c6ab4889890ff0bc45564369503f6abccbc448518485af107bd69f49d35878059c46d98dacb34db4757b52c406a
+  languageName: node
+  linkType: hard
+
+"@libsql/isomorphic-fetch@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@libsql/isomorphic-fetch@npm:0.3.1"
+  checksum: 9f131cae3b14c39712f1140e21b2ab1ccc81b5f6ad2aa90d739dc8df0602109a5c4c0ea820dcd39632ace7a4b247bc31e2a5e79cd6efaf5f1777650aac9ac694
+  languageName: node
+  linkType: hard
+
+"@libsql/isomorphic-ws@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "@libsql/isomorphic-ws@npm:0.1.5"
+  dependencies:
+    "@types/ws": ^8.5.4
+    ws: ^8.13.0
+  checksum: 8255a0f4cae8ea66c94d6ab02ca57ddc7d6472c43700fd089e615e2df56028bf3723f694c91fbd76db403772f43f49cf2545e29e7ac18f77aa482fcfed71c940
+  languageName: node
+  linkType: hard
+
+"@libsql/linux-arm64-gnu@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/linux-arm64-gnu@npm:0.5.8"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@libsql/linux-arm64-musl@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/linux-arm64-musl@npm:0.5.8"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@libsql/linux-x64-gnu@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/linux-x64-gnu@npm:0.5.8"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@libsql/linux-x64-musl@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/linux-x64-musl@npm:0.5.8"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@libsql/win32-x64-msvc@npm:0.5.8":
+  version: 0.5.8
+  resolution: "@libsql/win32-x64-msvc@npm:0.5.8"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@microsoft/applicationinsights-web-snippet@npm:^1.1.2":
   version: 1.1.2
   resolution: "@microsoft/applicationinsights-web-snippet@npm:1.1.2"
   checksum: 229bfb6edc39cc436002e1615b22ed1a877211fc37263e476da7754adc80ac0b5d18c5c32de343dbe6fd62d1efe3845da8b11481340317be3727e24ae2915bd7
+  languageName: node
+  linkType: hard
+
+"@neon-rs/load@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@neon-rs/load@npm:0.0.4"
+  checksum: ceed42a681980f4c96152857f6846434e3a89e25cac14228604a55e7992e96af01f30629026a498341984b405a2687099e56256a9eded9fee5393facca1ef762
   languageName: node
   linkType: hard
 
@@ -4013,6 +4120,15 @@ __metadata:
   version: 2.0.2
   resolution: "@types/which@npm:2.0.2"
   checksum: 8626a3c2f6db676c449142e1082e33ea0c9d88b8a2bd796366b944891e6da0088b2aa83d3fa9c79e6696f7381a851fc76d43bd353eb6c4d98a7775b4ae0a96a5
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.5.4":
+  version: 8.18.1
+  resolution: "@types/ws@npm:8.18.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 0331b14cde388e2805af66cad3e3f51857db8e68ed91e5b99750915e96fe7572e58296dc99999331bbcf08f0ff00a227a0bb214e991f53c2a5aca7b0e71173fa
   languageName: node
   linkType: hard
 
@@ -6911,6 +7027,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-libc@npm:2.0.2":
+  version: 2.0.2
+  resolution: "detect-libc@npm:2.0.2"
+  checksum: 2b2cd3649b83d576f4be7cc37eb3b1815c79969c8b1a03a40a4d55d83bc74d010753485753448eacb98784abf22f7dbd3911fd3b60e29fda28fed2d1a997944d
+  languageName: node
+  linkType: hard
+
 "detect-newline@npm:^3.0.0":
   version: 3.1.0
   resolution: "detect-newline@npm:3.1.0"
@@ -8980,6 +9103,7 @@ __metadata:
     "@hmcts/info-provider": ^1.1.0
     "@hmcts/nodejs-healthcheck": ^1.8.0
     "@hmcts/properties-volume": ^1.0.0
+    "@libsql/client": ^0.15.4
     "@types/body-parser": ^1.19.2
     "@types/chai-as-promised": ^7.1.5
     "@types/config": ^3.3.0
@@ -10430,6 +10554,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-base64@npm:^3.7.5":
+  version: 3.7.7
+  resolution: "js-base64@npm:3.7.7"
+  checksum: d1b02971db9dc0fd35baecfaf6ba499731fb44fe3373e7e1d6681fbd3ba665f29e8d9d17910254ef8104e2cb8b44117fe4202d3dc54c7cafe9ba300fe5433358
+  languageName: node
+  linkType: hard
+
 "js-beautify@npm:1.14.11":
   version: 1.14.11
   resolution: "js-beautify@npm:1.14.11"
@@ -10762,6 +10893,39 @@ __metadata:
     prelude-ls: ^1.2.1
     type-check: ~0.4.0
   checksum: 12c5021c859bd0f5248561bf139121f0358285ec545ebf48bb3d346820d5c61a4309535c7f387ed7d84361cf821e124ce346c6b7cef8ee09a67c1473b46d0fc4
+  languageName: node
+  linkType: hard
+
+"libsql@npm:^0.5.6":
+  version: 0.5.8
+  resolution: "libsql@npm:0.5.8"
+  dependencies:
+    "@libsql/darwin-arm64": 0.5.8
+    "@libsql/darwin-x64": 0.5.8
+    "@libsql/linux-arm64-gnu": 0.5.8
+    "@libsql/linux-arm64-musl": 0.5.8
+    "@libsql/linux-x64-gnu": 0.5.8
+    "@libsql/linux-x64-musl": 0.5.8
+    "@libsql/win32-x64-msvc": 0.5.8
+    "@neon-rs/load": ^0.0.4
+    detect-libc: 2.0.2
+  dependenciesMeta:
+    "@libsql/darwin-arm64":
+      optional: true
+    "@libsql/darwin-x64":
+      optional: true
+    "@libsql/linux-arm64-gnu":
+      optional: true
+    "@libsql/linux-arm64-musl":
+      optional: true
+    "@libsql/linux-x64-gnu":
+      optional: true
+    "@libsql/linux-x64-musl":
+      optional: true
+    "@libsql/win32-x64-msvc":
+      optional: true
+  checksum: da8804fcc620720d57cce20cda471ca3206a3f578446d34979e63d7cafa306be52633059bcc03de2403707df08425547b143c84c5f98b63f2f3d179c9592d160
+  conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=wasm32)
   languageName: node
   linkType: hard
 
@@ -12890,6 +13054,13 @@ __metadata:
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
   checksum: f67403fe7b34912148d9252cb7481266a354bd99ce82c835f79070643bb3c6583d10dbcfda4d41e04bbc1d8437e9af0fb1e1f2135727878f5308682a579429b7
+  languageName: node
+  linkType: hard
+
+"promise-limit@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "promise-limit@npm:2.7.0"
+  checksum: 3e20a46d752ab41c921feceb668b3a6d000438573e71342d42bf63373fdbafbf4b6a3f88ef5ff902a2a37be28152dc74e618e863134fd4c08c196448f4a6d28f
   languageName: node
   linkType: hard
 
@@ -15896,6 +16067,21 @@ __metadata:
     safe-buffer: ~5.1.0
     ultron: ~1.1.0
   checksum: 20b7bf34bb88715b9e2d435b76088d770e063641e7ee697b07543815fabdb752335261c507a973955e823229d0af8549f39cc669825e5c8404aa0422615c81d9
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.13.0":
+  version: 8.18.1
+  resolution: "ws@npm:8.18.1"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 4658357185d891bc45cc2d42a84f9e192d047e8476fb5cba25b604f7d75ca87ca0dd54cd0b2cc49aeee57c79045a741cb7d0b14501953ac60c790cd105c42f23
   languageName: node
   linkType: hard
 

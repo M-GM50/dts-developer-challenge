@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/info-provider", "npm:1.2.1"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
+            ["@libsql/client", "npm:0.15.4"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
             ["@types/config", "npm:3.3.4"],\
@@ -4144,11 +4145,140 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@libsql/client", [\
+        ["npm:0.15.4", {\
+          "packageLocation": "./.yarn/cache/@libsql-client-npm-0.15.4-e4018cdc0f-09ca3218f7.zip/node_modules/@libsql/client/",\
+          "packageDependencies": [\
+            ["@libsql/client", "npm:0.15.4"],\
+            ["@libsql/core", "npm:0.15.4"],\
+            ["@libsql/hrana-client", "npm:0.7.0"],\
+            ["js-base64", "npm:3.7.7"],\
+            ["libsql", "npm:0.5.8"],\
+            ["promise-limit", "npm:2.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/core", [\
+        ["npm:0.15.4", {\
+          "packageLocation": "./.yarn/cache/@libsql-core-npm-0.15.4-245262d9a6-28772e9c9a.zip/node_modules/@libsql/core/",\
+          "packageDependencies": [\
+            ["@libsql/core", "npm:0.15.4"],\
+            ["js-base64", "npm:3.7.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/darwin-arm64", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-darwin-arm64-npm-0.5.8-042be3dcc8/node_modules/@libsql/darwin-arm64/",\
+          "packageDependencies": [\
+            ["@libsql/darwin-arm64", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/darwin-x64", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-darwin-x64-npm-0.5.8-d111fb7051/node_modules/@libsql/darwin-x64/",\
+          "packageDependencies": [\
+            ["@libsql/darwin-x64", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/hrana-client", [\
+        ["npm:0.7.0", {\
+          "packageLocation": "./.yarn/cache/@libsql-hrana-client-npm-0.7.0-bf060c6e7d-0d36931ca3.zip/node_modules/@libsql/hrana-client/",\
+          "packageDependencies": [\
+            ["@libsql/hrana-client", "npm:0.7.0"],\
+            ["@libsql/isomorphic-fetch", "npm:0.3.1"],\
+            ["@libsql/isomorphic-ws", "npm:0.1.5"],\
+            ["js-base64", "npm:3.7.7"],\
+            ["node-fetch", "npm:3.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/isomorphic-fetch", [\
+        ["npm:0.3.1", {\
+          "packageLocation": "./.yarn/cache/@libsql-isomorphic-fetch-npm-0.3.1-8e2966dd20-9f131cae3b.zip/node_modules/@libsql/isomorphic-fetch/",\
+          "packageDependencies": [\
+            ["@libsql/isomorphic-fetch", "npm:0.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/isomorphic-ws", [\
+        ["npm:0.1.5", {\
+          "packageLocation": "./.yarn/cache/@libsql-isomorphic-ws-npm-0.1.5-d46a0b2a12-8255a0f4ca.zip/node_modules/@libsql/isomorphic-ws/",\
+          "packageDependencies": [\
+            ["@libsql/isomorphic-ws", "npm:0.1.5"],\
+            ["@types/ws", "npm:8.18.1"],\
+            ["ws", "virtual:d46a0b2a1298f44b4585b0e51e04cc7af718aff3191e76bb8a73c27f29d8219f54c864e0531f610b4f018bcae2726d8f23dc8c1a35a9692e90f03267f368c394#npm:8.18.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/linux-arm64-gnu", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-linux-arm64-gnu-npm-0.5.8-dc983720c1/node_modules/@libsql/linux-arm64-gnu/",\
+          "packageDependencies": [\
+            ["@libsql/linux-arm64-gnu", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/linux-arm64-musl", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-linux-arm64-musl-npm-0.5.8-635f61a530/node_modules/@libsql/linux-arm64-musl/",\
+          "packageDependencies": [\
+            ["@libsql/linux-arm64-musl", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/linux-x64-gnu", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-linux-x64-gnu-npm-0.5.8-f484b41e70/node_modules/@libsql/linux-x64-gnu/",\
+          "packageDependencies": [\
+            ["@libsql/linux-x64-gnu", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/linux-x64-musl", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-linux-x64-musl-npm-0.5.8-b06c683cc5/node_modules/@libsql/linux-x64-musl/",\
+          "packageDependencies": [\
+            ["@libsql/linux-x64-musl", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@libsql/win32-x64-msvc", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/@libsql-win32-x64-msvc-npm-0.5.8-d07e585056/node_modules/@libsql/win32-x64-msvc/",\
+          "packageDependencies": [\
+            ["@libsql/win32-x64-msvc", "npm:0.5.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@microsoft/applicationinsights-web-snippet", [\
         ["npm:1.1.2", {\
           "packageLocation": "./.yarn/cache/@microsoft-applicationinsights-web-snippet-npm-1.1.2-ba30aeca10-229bfb6edc.zip/node_modules/@microsoft/applicationinsights-web-snippet/",\
           "packageDependencies": [\
             ["@microsoft/applicationinsights-web-snippet", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@neon-rs/load", [\
+        ["npm:0.0.4", {\
+          "packageLocation": "./.yarn/cache/@neon-rs-load-npm-0.0.4-2905c29bd5-ceed42a681.zip/node_modules/@neon-rs/load/",\
+          "packageDependencies": [\
+            ["@neon-rs/load", "npm:0.0.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6079,6 +6209,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-which-npm-2.0.2-a13b6bc8eb-8626a3c2f6.zip/node_modules/@types/which/",\
           "packageDependencies": [\
             ["@types/which", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/ws", [\
+        ["npm:8.18.1", {\
+          "packageLocation": "./.yarn/cache/@types-ws-npm-8.18.1-61dc106ff0-0331b14cde.zip/node_modules/@types/ws/",\
+          "packageDependencies": [\
+            ["@types/ws", "npm:8.18.1"],\
+            ["@types/node", "npm:20.14.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9758,6 +9898,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["detect-libc", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/detect-libc-npm-2.0.2-03afa59137-2b2cd3649b.zip/node_modules/detect-libc/",\
+          "packageDependencies": [\
+            ["detect-libc", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["detect-newline", [\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/detect-newline-npm-3.1.0-6d33fa8d37-ae6cd429c4.zip/node_modules/detect-newline/",\
@@ -12089,6 +12238,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hmcts/info-provider", "npm:1.2.1"],\
             ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
             ["@hmcts/properties-volume", "npm:1.1.0"],\
+            ["@libsql/client", "npm:0.15.4"],\
             ["@types/body-parser", "npm:1.19.5"],\
             ["@types/chai-as-promised", "npm:7.1.8"],\
             ["@types/config", "npm:3.3.4"],\
@@ -13755,6 +13905,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["js-base64", [\
+        ["npm:3.7.7", {\
+          "packageLocation": "./.yarn/cache/js-base64-npm-3.7.7-641cff09f0-d1b02971db.zip/node_modules/js-base64/",\
+          "packageDependencies": [\
+            ["js-base64", "npm:3.7.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["js-beautify", [\
         ["npm:1.14.11", {\
           "packageLocation": "./.yarn/cache/js-beautify-npm-1.14.11-6578c9c9d5-92512b8dcc.zip/node_modules/js-beautify/",\
@@ -14105,6 +14264,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["levn", "npm:0.4.1"],\
             ["prelude-ls", "npm:1.2.1"],\
             ["type-check", "npm:0.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["libsql", [\
+        ["npm:0.5.8", {\
+          "packageLocation": "./.yarn/unplugged/libsql-npm-0.5.8-ce0b8bc294/node_modules/libsql/",\
+          "packageDependencies": [\
+            ["libsql", "npm:0.5.8"],\
+            ["@libsql/darwin-arm64", "npm:0.5.8"],\
+            ["@libsql/darwin-x64", "npm:0.5.8"],\
+            ["@libsql/linux-arm64-gnu", "npm:0.5.8"],\
+            ["@libsql/linux-arm64-musl", "npm:0.5.8"],\
+            ["@libsql/linux-x64-gnu", "npm:0.5.8"],\
+            ["@libsql/linux-x64-musl", "npm:0.5.8"],\
+            ["@libsql/win32-x64-msvc", "npm:0.5.8"],\
+            ["@neon-rs/load", "npm:0.0.4"],\
+            ["detect-libc", "npm:2.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16549,6 +16726,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/progress-npm-2.0.3-d1f87e2ac6-f67403fe7b.zip/node_modules/progress/",\
           "packageDependencies": [\
             ["progress", "npm:2.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["promise-limit", [\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/promise-limit-npm-2.7.0-cb930a295a-3e20a46d75.zip/node_modules/promise-limit/",\
+          "packageDependencies": [\
+            ["promise-limit", "npm:2.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20021,10 +20207,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:8.18.1", {\
+          "packageLocation": "./.yarn/cache/ws-npm-8.18.1-369b0f5491-4658357185.zip/node_modules/ws/",\
+          "packageDependencies": [\
+            ["ws", "npm:8.18.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:40161633ecef9d46bcf7484d533cce9b4d65103c4864a996a1db053cc86cb35738ad5ef2f4be259f0cecffff2fa9fb76a9ed95cd1a9168af6a4f5f2eb9115e9a#npm:8.13.0", {\
           "packageLocation": "./.yarn/__virtual__/ws-virtual-a8470ebc71/0/cache/ws-npm-8.13.0-26ffa3016a-53e991bbf9.zip/node_modules/ws/",\
           "packageDependencies": [\
             ["ws", "virtual:40161633ecef9d46bcf7484d533cce9b4d65103c4864a996a1db053cc86cb35738ad5ef2f4be259f0cecffff2fa9fb76a9ed95cd1a9168af6a4f5f2eb9115e9a#npm:8.13.0"],\
+            ["@types/bufferutil", null],\
+            ["@types/utf-8-validate", null],\
+            ["bufferutil", null],\
+            ["utf-8-validate", null]\
+          ],\
+          "packagePeers": [\
+            "@types/bufferutil",\
+            "@types/utf-8-validate",\
+            "bufferutil",\
+            "utf-8-validate"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:d46a0b2a1298f44b4585b0e51e04cc7af718aff3191e76bb8a73c27f29d8219f54c864e0531f610b4f018bcae2726d8f23dc8c1a35a9692e90f03267f368c394#npm:8.18.1", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-d76cba9592/0/cache/ws-npm-8.18.1-369b0f5491-4658357185.zip/node_modules/ws/",\
+          "packageDependencies": [\
+            ["ws", "virtual:d46a0b2a1298f44b4585b0e51e04cc7af718aff3191e76bb8a73c27f29d8219f54c864e0531f610b4f018bcae2726d8f23dc8c1a35a9692e90f03267f368c394#npm:8.18.1"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
